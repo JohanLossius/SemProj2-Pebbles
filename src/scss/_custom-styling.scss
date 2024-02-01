@@ -19,6 +19,12 @@ a {
   border: 2px solid $primary;
 }
 
+// Footer
+
+footer {
+  color: $primary;
+}
+
 // Index.html
 
 .custom-button {
@@ -122,4 +128,17 @@ a {
 .submit-button-class {
   font-weight: bold;
   color: white;
+}
+
+.bid-input {
+  border-radius: 10px;
+}
+
+.current-bids-class {
+  border-radius: 25px;
+}
+
+.listing-cont {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }

@@ -11874,6 +11874,10 @@ a {
   border: 2px solid pink;
 }
 
+footer {
+  color: pink;
+}
+
 .custom-button {
   background-color: #F5F1F1;
   border-radius: 25px;
@@ -11967,6 +11971,19 @@ a {
 .submit-button-class {
   font-weight: bold;
   color: white;
+}
+
+.bid-input {
+  border-radius: 10px;
+}
+
+.current-bids-class {
+  border-radius: 25px;
+}
+
+.listing-cont {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */
