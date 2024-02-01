@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pebbles Signup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Dosis&family=Peralta&family=Roboto&family=Teko&family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/index.css">
+  </head>
+  <body>
+    <header>
+    </header>
+    <main>
+      <section class="m-auto d-flex flex-column justify-content-space-between text-center">
+        <a href="index.html" title="home" class="p-2 nav-item home-link"><- Home</a>
+        <h1 class="p-2">Sign up to Pebbles here:</h1>
+        <form action="/profile" class="p-2 register-form-class" id="register-form">
+          <span class="p-2 message-cont"></span>
+          <div class="">
+            <div class="p-2 mt-2 first-name-container"></div>
+            <input type="text" placeholder="Your first name*" id="first-name" name="first-name" class="p-2 first-name-input" >
+          </div>
+          <div class="">
+            <div class="p-2 mt-2 last-name-container"></div>
+            <input type="text" placeholder="Your last name*" id="last-name" name="last-name" class="p-2 last-name-input" >
+          </div>
+          <div class=""> 
+            <div class="p-2 mt-2 email-feedback-container"></div>
+            <input type="email" placeholder="Your email*" id="email-input" name="email" class="p-2 email-input">
+          </div>
+          <div class="">
+            <div class="p-2 mt-2 password-feedback-container"></div>
+            <input type="password" placeholder="Your password*" id="password-input" name="password" class="p-2 password-input">
+          </div>
+          <div class="">
+            <div class="p-2 mt-2 avatar-feedback-container"></div>
+            <input type="text" placeholder="Optional: Profile picture live URL" id="avatar-input" name="avatar" class="p-2 avatar-input">
+          </div>
+          <div class="m-3"> 
+            <button type="submit" class="p-2 submit-button-class" id="submit-button">Sign Up</button>
+          </div>
+          <div class=""> 
+            <div class="p-2 already-account-container">Already have an account? <a href="login.html" title="Log in to Pebbles">Log in here</a></div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+    </footer>
+    <script type="module" src="js/signup.js"></script>
+  </body>
+</html>

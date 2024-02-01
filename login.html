@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Pebbles Login</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Dosis&family=Peralta&family=Roboto&family=Teko&family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="dist/css/index.css">
+  </head>
+  <body>
+    <header>
+    </header>
+    <main>
+      <section class="m-auto text-center d-flex justify-content-space-between flex-column">
+        <a href="index.html" title="Home" class="p-2 nav-item home-link"><- Home</a>
+        <h1 class="p-2">Login to Pebbles here:</h1>
+        <form action="/profile" class="p-2 login-form">
+          <span class="p-2 message-cont"></span>
+          <div class="p-2 email-input-div"> 
+            <div class="p-2 email-feedback-container"></div>
+            <input type="email" placeholder="Your email here*" id="email-input" name="email-input" class="p-2 email-input" >
+          </div>
+          <div class="p-2 password-input-div">
+            <div class="p-2 password-feedback-container"></div>
+            <input type="password" placeholder="Your password here*" id="password-input" name="password-input" class="p-2 password-input">
+          </div>
+          <!-- <div class=""> 
+              <div class="forgot-pw-container"><a href="/X" title="Reset Password">Forgot password?</a></div>
+          </div> -->
+          <div class="p-2 button-div"> 
+            <button type="submit" class="p-2 submit-button-class" id="submit-button">Login</button>
+          </div>
+          <div class=""> 
+            <div class="p-2 already-account-container">Don't have an account? <a href="signup.html" title="Sign Up to Pebbles">Sign up here</a></div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+    </footer>
+    <script type="module" src="js/login.js"></script>
+  </body>
+</html>
