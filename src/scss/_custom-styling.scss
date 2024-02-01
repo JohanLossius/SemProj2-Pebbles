@@ -1,3 +1,125 @@
-.intro-headline {
+body {
+  font-family: Arvo, serif;
+}
+
+a {
+  color: $info;
+}
+
+// Header
+
+.nav-link {
+  font-weight: bold;
+  background-color: #F5F1F1;
+  border-radius: 25px;
+  color: $info;
+}
+
+.current {
+  border: 2px solid $primary;
+}
+
+// Index.html
+
+.custom-button {
+  background-color: $secondary;
+  border-radius: 25px;
   font-size: x-large;
+  font-weight: bold;
+  color: $info;
+}
+
+.join-link {
+  text-decoration: none;
+}
+
+// Login and Sign Up form section
+
+.login-form-section {
+  background-color: $secondary;
+  border-radius: 25px;
+  max-width: 500px;
+  height: auto;
+};
+
+.password-input, .email-input, .first-name-input, .last-name-input, .avatar-input, .general-input {
+  border-radius: 25px;
+  border: none;
+  font-size: 0.87rem;
+  min-width: 20rem;
+};
+
+.success-message {
+  color: green;
+}
+
+.error-message {
+  color: red;
+};
+
+// Listing sections
+
+.new-listing-section {
+  background-color: $secondary;
+  border-radius: 25px;
+  max-width: 500px;
+  height: auto;
+};
+
+.custom-profile-image {
+  border-radius: 10px;
+  min-width: 100px;
+  max-width: 180px;
+  height: auto;
+}
+
+.custom-thumbnail {
+  width: 40px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card-img {
+  border-radius: 10px;
+  width: 5rem;
+  height: auto;
+}
+
+.new-listing-tag-label {
+  width: 50%;
+  height: auto;
+}
+
+.option-value {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 10px;
+  border: none;
+}
+
+// Profile section
+
+.custom-profile-image {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.input-avatar-url {
+  border-radius: 25px;
+  background-color: #F5F1F1;
+  border: none;
+}
+
+// Single listing section
+
+.bid-input {
+  border-radius: 25px;
+  border: none;
+  background-color: #F5F1F1;
+}
+
+.submit-button-class {
+  font-weight: bold;
+  color: white;
 }

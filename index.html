@@ -18,17 +18,36 @@
       </div>
       <ul class="col-6 d-flex nav m-auto d-flex justify-content-center nav-bar-custom align-items-center">
         <li class="nav-item">
-          <a class="nav-link active" href="signup.html">Sign Up</a>
+          <a class="nav-link active p-3 m-2" title="Sign Up" href="signup.html">Sign Up</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="login.html">Log In</a>
+          <a class="nav-link active p-3 m-2" title="Log In" href="login.html">Log In</a>
         </li>
       </ul>
     </header>
     <main>
       <section class="d-flex justify-content-center m-auto flex-column align-items-center" >
-        <h1 class="my-4">Make a new profile listing:</h1>
-    <section class="m-2 text-center listings-listings-section">  
+        <h1 class="my-4">Who said employees couldn't be bought?</h1>
+        <h3 class="my-2">- Purchase your next coworker today!</h3>
+        <a class="mx-auto my-2 p-4 text-center custom-button join-link" href="signup.html">Join Pebbles</a>
+      </section>
+      <section class="my-5 filter-section">
+        <div class="d-flex justify-content-center flex-column align-items-center m-2">
+            <h3 class="m-auto my-3">Filter by:</h3>
+            <div class="d-flex flex-column flex-md-row align-items-center">
+              <div class="btn-primary btn m-1" id="tag-div-frontend" data-tag="Frontend">Frontend</div>
+              <div class="btn-primary btn m-1" id="tag-div-backend" data-tag="Backend">Backend</div>
+              <div class="btn-primary btn m-1" id="tag-div-architecture" data-tag="Architecture">Architecture</div>
+              <div class="btn-primary btn m-1" id="tag-div-design" data-tag="Design">Design</div>
+              <div class="btn-primary btn m-1" id="tag-div-testing" data-tag="Testing">Testing</div>
+              <div class="btn-primary btn m-1" id="tag-div-project-management" data-tag="Project Management">Project Management</div>
+              <div class="btn-primary btn m-1" id="tag-div-devops" data-tag="DevOps">DevOps</div>
+              <div class="btn-primary btn m-1" id="tag-div-all" data-tag="All">All</div>
+            </div>
+        </div>
+      </section>
+      <section class="m-2 text-center feedback-cont"></section>
+      <section class="m-2 text-center listing-section"></section>
     </main>
     <footer class="container text-center my-4 mx-auto">
       <div class="row d-flex flex-column flex-lg-row justify-content-center">
@@ -36,6 +55,6 @@
           <a href="mailto:hello@pebbles.no" class="col mx-auto my-3 font-weight-bold">hello@pebbles.no</a>
       </div>
     </footer>
-    <script type="module" src="js/listings.js"></script>
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>
