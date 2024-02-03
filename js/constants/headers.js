@@ -1,4 +1,4 @@
-import { usernameConst, token, profilePictureUrl } from "../constants/localStorage.js";
+import { token } from "../constants/localStorage.js";
 
 const options = {
   headers: {

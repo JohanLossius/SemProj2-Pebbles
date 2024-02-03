@@ -8,31 +8,6 @@ logoutButton.addEventListener('click', () => {
   location.href = 'index.html';
 });
 
-// Display/hide new listing form
-
-const newListingButton = document.querySelector('.new-listing-button');
-const newListingForm = document.querySelector('.custom-form-new-listing');
-
-newListingButton.addEventListener('click', () => {
-  newListingForm.classList.toggle('d-none');
-});
-
-// Create new listing
-
-/**
- * @newListingForm This function takes the input from the form, and creates a new listing and posts it to the API.
- * @profilePicUrls This function takes the input from the form, and creates an array of profile picture urls.
- * @tagsInputsValues This function takes the input from the form, and creates an array of tag values.
- * @returns It returns the values of the inputs used to create the API, as well as the created & updated at dates, as well as the unique ID of the listing.
- */
-
-const submitButton = document.querySelector('#submit-button');
-const feedbackCont = document.querySelector(".feedback-cont");
-
-import { createListingUrl, allProfileListingsUrl, allListingsUrl, allListingsUrlSorted } from "../js/constants/api.js";
-import { token, loggedIn } from "../js/constants/localStorage.js";
-import { options } from "../js/constants/headers.js";
-
 // Check if logged in
 
 function isLoggedIn() {
@@ -51,7 +26,33 @@ if (isLoggedIn() === false) {
   location.href = "../index.html";
 };
 
+
+// Display/hide new listing form
+
+const newListingButton = document.querySelector('.new-listing-button');
+const newListingForm = document.querySelector('.custom-form-new-listing');
+
+newListingButton.addEventListener('click', () => {
+  newListingForm.classList.toggle('d-none');
+});
+
+// Create new listing
+
+const submitButton = document.querySelector('#submit-button');
+const feedbackCont = document.querySelector(".feedback-cont");
+
+import { createListingUrl, allProfileListingsUrl, allListingsUrl, allListingsUrlSorted } from "../js/constants/api.js";
+import { token, loggedIn } from "../js/constants/localStorage.js";
+import { options } from "../js/constants/headers.js";
+
 // New listing
+
+/**
+ * @newListingForm This function takes the input from the form, and creates a new listing and posts it to the API.
+ * @profilePicUrls This function takes the inputs from the form, and creates an array of profile picture urls.
+ * @tagsInputsValues This function takes the input from the form, and creates an array of tag values.
+ * @returns It returns the values of the inputs used to create the listing, including the created & updated at dates, as well as the unique ID of the listing, and posts this to the API.
+ */
 
 newListingForm.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -91,14 +92,9 @@ newListingForm.addEventListener("submit", async (event) => {
     },
   };
 
-  console.log("requestOptions: ", requestOptions);
-
   try {
     const response = await fetch(createListingUrl, requestOptions);
-    console.log("Response: ", response);
-
     const json = await response.json();
-    console.log("json: ", json);
     
     if (!response.ok) {
       throw new Error(json.errors[0].message);
@@ -124,6 +120,17 @@ const listingsSection = document.querySelector(".listings-listings-section");
 
 // To call only right tags
 
+/**
+ * @function fetchListingsByTag This function fetches the listings based on the tag that is passed as an argument. It uses the API URL and the options container to make an API call, and then returns the JSON data.
+ * @param {string} tag The tag that is used to filter the listings.
+ * @returns {array} Returns an array with objects of the JSON data of the listings.
+ * @example
+ * // fetch listings by frontend tag
+ * let tag = "Frontend";
+ * fetchListingsByTag(tag);
+ * // expect an array with objects of the JSON data of the listing with the tag "Frontend"
+ */
+
 const allTags = ["Frontend", "Design", "Backend", "Architecture", "Testing", "Project Management", "DevOps"];
 
 async function fetchListingsByTag(tag) {
@@ -145,6 +152,13 @@ async function fetchListingsByTag(tag) {
   }
 };
 
+/**
+ * @function fetchListings This function fetches the listings based on the tags that are passed as an argument. It uses the fetchListingsByTag function to fetch the listings for each tag, and then returns an array of all the fetched listings.  
+ * @param {array} tags The array of string tags that is used to fetch the listings.
+ * @param {array} fetchedListings The array of fetched listings, that accumulates for each tag that is called by the fetchListingsByTag function.
+ * @returns {array} Returns an array with objects of the JSON data of the listings.
+ */
+
 async function fetchListings(tags) {
   const fetchedListings = [];
   const rightTags2 = tags;
@@ -155,6 +169,12 @@ async function fetchListings(tags) {
   }
   return fetchedListings;
 };
+
+/**
+ * @function listingsFeed This function fetches the listings based on the tags that are passed as an argument, and then dynamically populates the HTML of the listings page with the listings. It uses the fetchListings function to fetch the listings, and then iterates through the fetched listings to create elements for each listing, and then appends the elements to the HTML of the listings page.
+ * @param {array} tags An array of strings with all the different tags that are used to fetch the listings.
+ * @param {array} listings The array of fetched listings, that accumulates for each tag that is called by the fetchListingsByTag function.
+ */
 
 async function listingsFeed(tags) {
   const rightTags = tags;
@@ -280,7 +300,6 @@ async function listingsFeed(tags) {
 
 listingsFeed(allTags);
 
-
 // Filter by certain tags
 
 const frontendTag = document.querySelector('#tag-div-frontend');
@@ -294,11 +313,16 @@ const allTagsCont = document.querySelector('#tag-div-all');
 
 const categoryTags = [frontendTag, backendTag, architectureTag, designTag, testingTag, devopsTag, projectManagementTag];
 
+/**
+ * @method categoryTags This function takes the clicked tag value, and filters the listings feed by the tag value. It also handles the styling of the clicked tag.
+ * @param {string} clickedTag The value of the tag that was clicked.
+ * @returns It returns the listings feed filtered by the clicked tag value.
+ */
+
 categoryTags.forEach(tag => {
   tag.addEventListener('click', (event) => {
     listingsSection.innerHTML = "";
     let clickedTag = event.target.dataset.tag;
-    console.log("clickedTag: ", clickedTag);
 
     frontendTag.classList.remove("selected-tag");
     backendTag.classList.remove("selected-tag");
@@ -314,6 +338,10 @@ categoryTags.forEach(tag => {
     listingsFeed([clickedTag]);
   });
 });
+
+/**
+ * Same as above for the categoryTags, but for all the tags combined with the allTagsCont and All tags button.
+ */
 
 allTagsCont.addEventListener('click', () => {
   listingsSection.innerHTML = "";

@@ -11955,6 +11955,12 @@ footer {
   border: none;
 }
 
+.selected-tag {
+  background-color: #AF0032;
+  color: white;
+  font-weight: bold;
+}
+
 .custom-profile-image {
   width: 20%;
   height: auto;

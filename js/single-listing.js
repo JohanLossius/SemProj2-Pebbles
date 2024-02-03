@@ -21,6 +21,10 @@ const singleListingsUrl = `${baseUrl}/auction/listings/${listingId}?_bids=true&_
 const listingCont = document.querySelector(".listing-cont");
 const feedbackCont = document.querySelector(".feedback-cont");
 
+/**
+ * @function singleListingDisplay This function fetches the data of a single listing, based on the listingId that is passed in the URL. It then populates the HTML with the data from the API call, and dynamically creates elements for the tags and the bids, to display them on the page.  
+ */
+
 async function singleListingDisplay() {
   try {
     const response = await fetch(singleListingsUrl, options);
@@ -77,7 +81,6 @@ async function singleListingDisplay() {
     let endsAtFormatted = endsAt.slice(0, 10);
 
     let bids = json.bids;
-    console.log("bids: ", bids);
 
     const listing = document.createElement("div");
     listing.classList.add("card", "text-center", "mx-auto", "mt-2", "card-custom");
@@ -195,6 +198,12 @@ if (profilePictureUrl) {
 // Make new bids
 
 const submitButton = document.querySelector(".submit-button-class");
+
+/**
+ * @function submitButton This function makes a POST request to the API, to make a new bid on the listing. It takes the input value from the bid input field, and sends it to the API, to make a new bid. If the bid is successful, it reloads the page to display the new bid. If the bid is unsuccessful, it displays an error message to the user, telling them what went wrong.
+ * @param {string} bidInput The input value from the bid input field
+ * @property {number} bidAmount The parsed float value of the bid input
+ */
 
 submitButton.addEventListener("click", async () => {
   const bidInput = document.querySelector(".bid-input").value;

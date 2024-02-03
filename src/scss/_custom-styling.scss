@@ -108,6 +108,12 @@ footer {
   border: none;
 }
 
+.selected-tag {
+  background-color: $danger;
+  color: white;
+  font-weight: bold;
+}
+
 // Profile section
 
 .custom-profile-image {

@@ -1,8 +1,6 @@
 /**
- * 
  * @param {string} firstName First name input from sign up page 
  * @returns {boolean} True or false based on nr of characters of name, 2 or more is true
- *
  */
 export function firstNameCheck(firstName) {
   const firstNameLength = firstName.trim().length;
@@ -15,7 +13,6 @@ export function firstNameCheck(firstName) {
 };
 
 /**
-* 
 * @param {string} lastName Last name input from sign up page
 * @returns {boolean} True or false based on nr of characters of name, 2 or more is true
 */
@@ -30,7 +27,6 @@ export function lastNameCheck(lastName) {
 };
 
 /**
-* 
 * @param {string} email email input from sign up page 
 * @property {boolean} validEmail returns true or false whether the reg ex algoritm deems the input to be a valid email or not.
 * @property {number} studNoroffCont returns -1 if "@stud.noroff.no" is not present in the email input valule, and if it is present, it returns the nr of characters present before "@stud.noroff.no".
@@ -59,7 +55,6 @@ export function emailCheck(email) {
 };
 
 /**
-* 
 * @param {string} password User password input. 
 * @property {number} passwordLength Trims any potential blank spaces in the users password input, and return the number of characters present in the user input.
 * @returns {boolean} Returns true or false, based on whether the password contains 8 characters or more. False if less, true if more.

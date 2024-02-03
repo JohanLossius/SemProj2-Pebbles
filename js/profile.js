@@ -1,5 +1,6 @@
 import { token, usernameConst, profilePictureUrl, loggedIn } from "../js/constants/localStorage.js";
 import { profileUrl, profilePicUpdateUrl, allProfileListingsUrl } from "../js/constants/api.js";
+import { options } from "../js/constants/headers.js";
 
 // Check if logged in
 
@@ -32,6 +33,8 @@ logoutButton.addEventListener('click', () => {
 const profileNameCont = document.querySelector(".profile-name");
 profileNameCont.textContent = usernameConst;
 
+const profileFeedbackCont = document.querySelector(".profile-picture-feedback");
+
 const profileImageCont = document.querySelector(".custom-profile-image");
 const profileEmailCont = document.querySelector(".profile-email");
 const creditCounter = document.querySelector(".custom-credit");
@@ -42,52 +45,44 @@ const profileUrlInput = document.querySelector(".input-avatar-url");
 const profileListingsSection = document.querySelector(".profile-listings-section");
 const feedbackCont = document.querySelector(".feedback-cont");
 
-const options = {
-  headers: {
-    Authorization: `Bearer ${token}`,
-  },
-};
-
-console.log("options: ", options);
-
 /**
  * @function profileData This function uses the URL that is generated with the author's username, to create an API call that fetches the data about the author, to display it on the profile section of the profile page. The data is dynamically populated with JS into the hardcoded HTML of the web page.
  */
 async function profileData() {
   try {
       const response = await fetch(profileUrl, options);
-      console.log("Response: ", response);
-
       const json2 = await response.json();
-      console.log("json2: ", json2);
+
+      if(!response.ok) {
+        throw new Error(json.errors[0].message);
+      }
 
       let profilePicture = json2.avatar;
-      console.log("profilePicture: ", profilePicture);
       if(profilePicture) {
           profilePicture = json2.avatar;
       } else {
           profilePicture = "../img/blank-profile-picture.png";
       };
       profileImageCont.setAttribute("src", profilePicture);
-      console.log("profileImageCont: ", profileImageCont);
 
       let profileEmail = json2.email;
-      console.log("profileEmail ", profileEmail);
+
       profileEmailCont.setAttribute("href", `mailto:${profileEmail}`);
       profileEmailCont.textContent = profileEmail;
 
       let profileCredits = json2.credits;
-      console.log("profileCredits ", profileCredits);
       creditCounter.textContent = profileCredits;
   }
   catch (error) {
       console.log("error: ", error);
+      profileFeedbackCont.innerHTML = `<span class="error-message">${error}</span>`;
   }
 }
 profileData();
 
 /**
  * @function updateProfileAvatar This function updates the profile picture of the user, based on the input of the user. It uses the PUT method to update the profile picture, and then reloads the page to display the new profile picture.
+ * @param {string} profilePictureUrl2 The new profile picture of the user, that is fetched from the API call. It is being set to local storage, to be displayed on the profile page. 
  */
 
 const updateProfileAvatar = submitButton.addEventListener("click", async (data) => {
@@ -95,7 +90,6 @@ const updateProfileAvatar = submitButton.addEventListener("click", async (data) 
 
   const profileUrlInput = document.querySelector(".input-avatar-url");
   const profileUrlConst = profileUrlInput.value;
-  const profileFeedbackCont = document.querySelector(".profile-picture-feedback");
 
   const optionsProfilePut = {
     method: 'PUT',
@@ -111,11 +105,13 @@ const updateProfileAvatar = submitButton.addEventListener("click", async (data) 
   try {
     const resp = await fetch(profilePicUpdateUrl, optionsProfilePut);
     const json = await resp.json();
-    console.log("json: ", json);
+
+    const profilePictureUrl2 = json.avatar;
     if (!resp.ok) {
       throw new Error(json.errors[0].message);
     }
     if (resp.ok) {
+      localStorage.setItem("profilePictureUrl", profilePictureUrl2);
       location.reload();
     }
   }
@@ -133,10 +129,7 @@ const updateProfileAvatar = submitButton.addEventListener("click", async (data) 
 async function profileListings() {
   try {
     const response = await fetch(allProfileListingsUrl, options);
-    console.log("Response: ", response);
-
     const json = await response.json();
-    console.log("json: ", json);
 
     if(!response.ok) {
       throw new Error(json.errors[0].message);
@@ -177,8 +170,6 @@ async function profileListings() {
 
       let endsAt = json[i].endsAt;
       let endsAtFormatted = endsAt.slice(0, 10);
-
-      // TESTTESTTESTTEST
 
       const listing = document.createElement("div");
       listing.classList.add("card", "text-center", "mx-auto", "my-2", "card-custom");
