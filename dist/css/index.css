@@ -11857,12 +11857,15 @@ textarea.form-control-lg {
 }
 body {
   font-family: Arvo, serif;
-  margin: 0 auto;
-  width: 98%;
 }
 
 a {
   color: #F88D9B;
+}
+
+header, main, footer {
+  margin: auto;
+  max-width: 97%;
 }
 
 .nav-link {

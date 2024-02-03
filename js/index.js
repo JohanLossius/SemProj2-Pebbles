@@ -136,15 +136,6 @@ async function listingsFeed(tags) {
             </div>
           </div>`;
 
-
-        //   <div class="card-footer d-flex text-center justify-content-center align-items-center flex-column">
-        //   <span class="mt-2">Please sign up or log in to make bids:</span>
-        //   <div class="d-flex justify-content-center">
-        //     <a class="p-3 btn btn btn-primary text-center my-4 mx-2" href="signup.html">Sign up</a>
-        //     <a class="p-3 btn btn btn-primary text-center my-4 mx-2" href="login.html">Log in</a>
-        //   </div>
-        // </div>
-
         listing.querySelector(".title-cont").textContent = title;
         listing.querySelector(".card-text-custom").textContent = description;
 

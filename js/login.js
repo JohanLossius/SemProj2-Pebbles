@@ -70,20 +70,14 @@ form.addEventListener("submit", async (data) => {
       localStorage.setItem("loggedIn", true);
 
       if (resp.ok) {
-        const profileOptions = {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-
         messageCont.innerHTML = ` <div class="success-message">You are now successfully logged in. If the listings feed doesn't load automatically, click here:</div>
                                   <a href="listings.html" class="m-2 btn btn-primary" title="Pebbles Listings">Listings</a>`;
         window.location.href = "listings.html";
 
       }
     } catch (error) {
-      console.log(error);
-      messageCont.innerHTML = `<span class="error-message">${error}</span>`;
+        console.log(error);
+        messageCont.innerHTML = `<span class="error-message">${error}</span>`;
     }
   }
 });
