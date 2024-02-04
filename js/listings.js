@@ -77,6 +77,20 @@ newListingForm.addEventListener("submit", async (event) => {
   const purchaseBefore = document.querySelector(".purchase-before-input").value;
   const purchaseBeforeFormatted = `${purchaseBefore}T00:00:00.000Z`;
 
+  // Check if all required fields are filled out, except tags, that is handled below
+  if (!title || !description || !purchaseBefore) {
+    feedbackCont.innerHTML = `<span class="error-message">Please fill in all required fields.</span>`;
+    location.href = '#';
+    return;
+  };
+
+  // Check if at least one tag is selected
+  if (tagsInputsValues.length === 0) {
+    feedbackCont.innerHTML = `<span class="error-message">Please select at least one tag.</span>`;
+    location.href = '#';
+    return;
+  };
+
   const requestOptions = {
     method: 'POST',
     body: JSON.stringify({
