@@ -136,7 +136,7 @@ async function listingsFeed(tags) {
             <span class="last-updated-span">Last updated ${updatedFormatted}</span>
           </div>
           <div class="card-body d-flex flex-column m-auto align-items-center">
-            <img src="img/blank-profile-picture.png" class="custom-profile-image">
+            <img src="img/blank-profile-picture.png" class="custom-profile-image" alt="Listing Profile Picture">
             <div class="d-flex m-auto justify-content-center p-2">
               <div>
                 <a href="github.com" title="GitHub.com" class="btn btn-primary m-2 custom-github-link">GitHub Repo</a>

@@ -11863,6 +11863,10 @@ a {
   color: #F88D9B;
 }
 
+.active {
+  border: 3px solid pink;
+}
+
 header, main, footer {
   margin: auto;
   max-width: 97%;

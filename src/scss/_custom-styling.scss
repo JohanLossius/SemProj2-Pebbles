@@ -6,6 +6,10 @@ a {
   color: $info;
 }
 
+.active {
+  border: 3px solid $primary;
+}
+
 header, main, footer {
   margin: auto;
   max-width: 97%;

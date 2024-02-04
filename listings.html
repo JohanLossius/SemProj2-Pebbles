@@ -1,120 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Pebbles Listings</title>
-  <link rel="stylesheet" href="dist/css/index.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Dosis&family=Peralta&family=Roboto&family=Teko&family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="d-flex flex-column flex-lg-row justify-content-center m-auto">
-    <div class="col-12 col-md-6 m-auto d-flex justify-content-center">
-      <a href="index.html">
-        <img src="img/peb-logo-horiz.svg" alt="pebbles logo" class="img-fluid logo m-auto">
-      </a>
-    </div>
-    <ul class="col-12 col-md-6 d-flex nav m-auto d-flex justify-content-center nav-bar-custom align-items-center">
-      <li class="nav-item">
-        <a class="nav-link p-3 m-2 active" href="listings.html">Listings</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link p-3 m-2 active" href="profile.html">Profile</a>
-      </li>
-      <li class="nav-item">
-        <div class="btn btn-primary p-3 mx-5 my-2 logout-button">Log Out</div>
-      </li>
-    </ul>
-  </header>
-  <main class="my-4">
-    <section class="d-flex justify-content-center m-auto flex-column align-items-center new-listing-section" >
-      <h1 class="my-4 text-center">Make a new profile listing:</h1>
-      <div class="btn btn-primary p-2 mb-3 mx-auto text-center new-listing-button">New+</div>
-      <div class="my-3 feedback-cont"></div>
-      <form action="" class="d-flex justify-content-center flex-column m-auto custom-form-new-listing d-none">
-          <fieldset class="p-2 select-competence-categories-section">
-            <legend id="tag-label-id" class="text-center p-3 select-competence-categories-title">Select competence categories:*</legend>
-            <div class="d-flex justify-content-center text-center select-competence-categories-div">
-              <label for="frontend-input" id="tag-label-id" class="text-center p-3 m-auto new-listing-tag-label">Frontend</label>
-              <input id="frontend-input" type="checkbox" value="Frontend" class="m-auto option-value"></input>
-            </div>
-            <div class="d-flex justify-content-center text-center select-competence-categories-div">
-              <label for="backend-input" id="tag-label-id" class="text-center p-3 m-auto new-listing-tag-label">Backend</label>
-              <input id="backend-input" type="checkbox" value="Backend" class="m-auto option-value "></input>
-            </div>
-            <div class="d-flex justify-content-center select-competence-categories-div">
-              <label for="architecture-input" id="tag-label-id" class="text-center p-3 m-auto new-listing-tag-label">Architecture</label>
-              <input id="architecture-input" type="checkbox" value="Architecture" class="m-auto option-value"></input>
-            </div>
-            <div class="d-flex justify-content-center select-competence-categories-div">
-              <label for="design-input" id="tag-label-id" class="text-center p-3 m-auto new-listing-tag-label">Design</label>
-              <input id="design-input" type="checkbox" value="Design" class="m-auto option-value"></input>
-            </div>
-            <div class="d-flex justify-content-center select-competence-categories-div">
-              <label for="testing-input" id="tag-label-id" class="text-center p-3 m-auto new-listing-tag-label">Testing</label>
-              <input id="testing-input" type="checkbox" value="Testing" class="m-auto option-value"></input>
-            </div>
-            <div class="d-flex justify-content-center select-competence-categories-div">
-              <label for="project-management-input" id="tag-label-id" class="text-center p-3 m-auto new-listing-tag-label">Project Management</label>
-              <input id="project-management-input" type="checkbox" value="Project Management" class="m-auto option-value"></input>
-            </div>
-            <div class="d-flex justify-content-center select-competence-categories-div">
-              <label for="devops-input" id="tag-label-id" class="text-center p-3 m-auto new-listing-tag-label">DevOps</label>
-              <input id="devops-input" type="checkbox" value="DevOps" class="m-auto option-value"></input>
-            </div>
-          </fieldset>
-          <div class="d-flex flex-column my-1" >
-              <div class="text-center my-1 input-div">
-                <input type="text-field" placeholder="Tech profile title here*" id="post-title" name="post-title" class="p-2 my-2 text-center post-message-title general-input" >
-              </div>
-              <div class="text-center my-1 input-div">
-                <input type="text-field" placeholder="Brief profile summary here*" id="post-message" name="post-message" class="p-2 my-2 text-center custom-description-new-listing general-input">
-              </div>
-              <div class="text-center my-1 input-div">
-                <input type="text-field" placeholder="Profile picture URL" name="profile-pic-url-1" class="p-2 my-2 text-center profile-pic-url profile-pic-url-1 general-input">
-              </div>
-              <div class="text-center my-1 input-div">
-                <input type="text-field" placeholder="Optional: GitHub profile picture URL" name="profile-pic-url-2" class="p-2 my-2 text-center profile-pic-url profile-pic-url-2 general-input">
-              </div>
-              <div class="text-center my-1 input-div">
-                <input type="text-field" placeholder="Optional: LinkedIn Profile picture URL" name="profile-pic-url-3" class="p-2 my-2 text-center profile-pic-url profile-pic-url-3 general-input">
-              </div>
-              <div class="my-1 mx-3 text-center purchase-before-div">
-                <div id="tag-label-id" class="p-1 mt-3 text-center purchase-before-label">Auction ends at date:*</div>
-                <input id="purchase-before-input" type="date" placeholder="Purchase before date" name="purchase-before-name" class="p-2 my-2 text-center purchase-before-input general-input">
-              </div>
-          </div>
-          <div class="text-center publish-button-div" > 
-              <button type="submit" id="submit-button" class="p-2 text-center mx-auto my-3 btn btn-danger publish-button-class submit-button-class">Publish</button>
-          </div>
-      </form>
-    </section>
-    <section class="my-5">
-      <div class="d-flex justify-content-center flex-column align-items-center">
-          <h3 class="m-auto my-3">Filter by:</h3>
-          <div class="d-flex flex-column flex-lg-row align-items-center">
-            <div class="btn-primary btn m-1" id="tag-div-frontend" data-tag="Frontend">Frontend</div>
-            <div class="btn-primary btn m-1" id="tag-div-backend" data-tag="Backend">Backend</div>
-            <div class="btn-primary btn m-1" id="tag-div-architecture" data-tag="Architecture">Architecture</div>
-            <div class="btn-primary btn m-1" id="tag-div-design" data-tag="Design">Design</div>
-            <div class="btn-primary btn m-1" id="tag-div-testing" data-tag="Testing">Testing</div>
-            <div class="btn-primary btn m-1" id="tag-div-project-management" data-tag="Project Management">Project Management</div>
-            <div class="btn-primary btn m-1" id="tag-div-devops" data-tag="DevOps">DevOps</div>
-            <div class="btn-primary btn m-1" id="tag-div-all" data-tag="All">All</div>
-          </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Pebbles Listings</title>
+    <link rel="stylesheet" href="dist/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Dosis&family=Peralta&family=Roboto&family=Teko&family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="d-flex flex-column flex-lg-row justify-content-center m-auto">
+      <div class="col-12 col-md-6 m-auto d-flex justify-content-center">
+        <a href="index.html" title="Home">
+          <img src="img/peb-logo-horiz.svg" alt="pebbles logo" class="img-fluid logo m-auto">
+        </a>
       </div>
-    </section>
-    <section class="m-2 text-center listings-listings-section">
-    </section>
-  </main>
-  <footer class="container text-center my-4 mx-auto">
-    <div class="row d-flex flex-column flex-lg-row justify-content-center">
-        <div class="col mx-auto my-3 font-weight-bold text-info">All rights reserved © 2024</div>
-        <a href="mailto:hello@pebbles.no" class="col mx-auto my-3 font-weight-bold">hello@pebbles.no</a>
-    </div>
-  </footer>
-  <script type="module" src="js/listings.js"></script>
-</body>
+      <ul class="col-12 col-md-6 d-flex nav m-auto d-flex justify-content-center nav-bar-custom align-items-center">
+        <li class="nav-item">
+          <a class="nav-link p-3 m-2 active" href="listings.html" title="Listings">Listings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link p-3 m-2" href="profile.html" title="Profile">Profile</a>
+        </li>
+        <li class="nav-item">
+          <div class="btn btn-primary p-3 mx-5 my-2 logout-button">Log Out</div>
+        </li>
+      </ul>
+    </header>
+    <main class="my-4">
+      <section class="d-flex justify-content-center m-auto flex-column align-items-center new-listing-section" >
+        <h1 class="my-4 text-center">Make a new profile listing:</h1>
+        <div class="btn btn-primary p-2 mb-3 mx-auto text-center new-listing-button">New+</div>
+        <div class="my-3 feedback-cont"></div>
+        <form action="" class="d-flex justify-content-center flex-column m-auto custom-form-new-listing d-none">
+            <fieldset class="p-2 select-competence-categories-section">
+              <legend id="tag-label-id" class="text-center p-3 select-competence-categories-title">Select competence categories:*</legend>
+              <div class="d-flex justify-content-center text-center select-competence-categories-div">
+                <label for="frontend-input" id="tag-label-id" class="text-center p-3 m-auto new-listing-tag-label">Frontend</label>
+                <input id="frontend-input" type="checkbox" value="Frontend" class="m-auto option-value"></input>
+              </div>
+              <div class="d-flex justify-content-center text-center select-competence-categories-div">
+                <label for="backend-input" id="tag-label-id" class="text-center p-3 m-auto new-listing-tag-label">Backend</label>
+                <input id="backend-input" type="checkbox" value="Backend" class="m-auto option-value "></input>
+              </div>
+              <div class="d-flex justify-content-center select-competence-categories-div">
+                <label for="architecture-input" id="tag-label-id" class="text-center p-3 m-auto new-listing-tag-label">Architecture</label>
+                <input id="architecture-input" type="checkbox" value="Architecture" class="m-auto option-value"></input>
+              </div>
+              <div class="d-flex justify-content-center select-competence-categories-div">
+                <label for="design-input" id="tag-label-id" class="text-center p-3 m-auto new-listing-tag-label">Design</label>
+                <input id="design-input" type="checkbox" value="Design" class="m-auto option-value"></input>
+              </div>
+              <div class="d-flex justify-content-center select-competence-categories-div">
+                <label for="testing-input" id="tag-label-id" class="text-center p-3 m-auto new-listing-tag-label">Testing</label>
+                <input id="testing-input" type="checkbox" value="Testing" class="m-auto option-value"></input>
+              </div>
+              <div class="d-flex justify-content-center select-competence-categories-div">
+                <label for="project-management-input" id="tag-label-id" class="text-center p-3 m-auto new-listing-tag-label">Project Management</label>
+                <input id="project-management-input" type="checkbox" value="Project Management" class="m-auto option-value"></input>
+              </div>
+              <div class="d-flex justify-content-center select-competence-categories-div">
+                <label for="devops-input" id="tag-label-id" class="text-center p-3 m-auto new-listing-tag-label">DevOps</label>
+                <input id="devops-input" type="checkbox" value="DevOps" class="m-auto option-value"></input>
+              </div>
+            </fieldset>
+            <div class="d-flex flex-column my-1" >
+                <div class="text-center my-1 input-div">
+                  <input type="text-field" placeholder="Tech profile title here*" id="post-title" name="post-title" class="p-2 my-2 text-center post-message-title general-input" >
+                </div>
+                <div class="text-center my-1 input-div">
+                  <input type="text-field" placeholder="Brief profile summary here*" id="post-message" name="post-message" class="p-2 my-2 text-center custom-description-new-listing general-input">
+                </div>
+                <div class="text-center my-1 input-div">
+                  <input type="text-field" placeholder="Profile picture URL" name="profile-pic-url-1" class="p-2 my-2 text-center profile-pic-url profile-pic-url-1 general-input">
+                </div>
+                <div class="text-center my-1 input-div">
+                  <input type="text-field" placeholder="Optional: GitHub profile picture URL" name="profile-pic-url-2" class="p-2 my-2 text-center profile-pic-url profile-pic-url-2 general-input">
+                </div>
+                <div class="text-center my-1 input-div">
+                  <input type="text-field" placeholder="Optional: LinkedIn Profile picture URL" name="profile-pic-url-3" class="p-2 my-2 text-center profile-pic-url profile-pic-url-3 general-input">
+                </div>
+                <div class="my-1 mx-3 text-center purchase-before-div">
+                  <div id="tag-label-id" class="p-1 mt-3 text-center purchase-before-label">Auction ends at date:*</div>
+                  <input id="purchase-before-input" type="date" placeholder="Purchase before date" name="purchase-before-name" class="p-2 my-2 text-center purchase-before-input general-input">
+                </div>
+            </div>
+            <div class="text-center publish-button-div" > 
+                <button type="submit" id="submit-button" class="p-2 text-center mx-auto my-3 btn btn-danger publish-button-class submit-button-class">Publish</button>
+            </div>
+        </form>
+      </section>
+      <section class="my-5">
+        <div class="d-flex justify-content-center flex-column align-items-center">
+            <h3 class="m-auto my-3">Filter by:</h3>
+            <div class="d-flex flex-column flex-lg-row align-items-center">
+              <div class="btn-primary btn m-1" id="tag-div-frontend" data-tag="Frontend">Frontend</div>
+              <div class="btn-primary btn m-1" id="tag-div-backend" data-tag="Backend">Backend</div>
+              <div class="btn-primary btn m-1" id="tag-div-architecture" data-tag="Architecture">Architecture</div>
+              <div class="btn-primary btn m-1" id="tag-div-design" data-tag="Design">Design</div>
+              <div class="btn-primary btn m-1" id="tag-div-testing" data-tag="Testing">Testing</div>
+              <div class="btn-primary btn m-1" id="tag-div-project-management" data-tag="Project Management">Project Management</div>
+              <div class="btn-primary btn m-1" id="tag-div-devops" data-tag="DevOps">DevOps</div>
+              <div class="btn-primary btn m-1" id="tag-div-all" data-tag="All">All</div>
+            </div>
+        </div>
+      </section>
+      <section class="m-2 text-center listings-listings-section">
+      </section>
+    </main>
+    <footer class="container text-center my-4 mx-auto">
+      <div class="row d-flex flex-column flex-lg-row justify-content-center">
+          <div class="col mx-auto my-3 font-weight-bold text-info">All rights reserved © 2024</div>
+          <a href="mailto:hello@pebbles.no" class="col mx-auto my-3 font-weight-bold" title="Mailto Pebbles">hello@pebbles.no</a>
+      </div>
+    </footer>
+    <script type="module" src="js/listings.js"></script>
+  </body>
 </html>
