@@ -9,17 +9,19 @@ clone from the GitHub repo: https://github.com/JohanLossius/SemProj2-Pebbles
 
 **OR**
 
-- You can also pull it directly into VS code from GitHub by adding:
+- You can also pull it directly into VS code from GitHub by adding the following.
+
+**Add:**
 ```
 git remote add origin https://github.com/JohanLossius/SemProj2-Pebbles.git
 ```
 
-And then pull it:
+**Then pull:**
 ```
 git pull origin main
 ```
 
-And then install it:
+**Then intsall:**
 ```
 npm i
 ```
@@ -58,6 +60,7 @@ https://github.com/JohanLossius/SemProj2-Pebbles
 ## Project Requirements
 
 **Semester Project 2 requirements:**
+
 User Stories:
   - A user with a stud.noroff.no email may register
   - A registered user may login
