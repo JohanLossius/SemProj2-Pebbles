@@ -33,12 +33,13 @@ This project was built with:
 Ensure all live servers are closed.
 Open live server, reccommended using visual studio built-in extension.
 Can also use the following to run the installed live-server package.
-**Run**
+
+**Run:**
 ```
 npm run start
 ```
 
-**Run** 
+**Run:** 
 ```
 npm run build
 ```
@@ -67,6 +68,11 @@ Semester Project 2 requirements:
     A registered user may add a Bid to another user’s Listing
     A registered user may view Bids made on a Listing
     An unregistered user may search through Listings
+
+## Concept of Pebbles
+Pebbles is meant to be a playful brand that exemplifies creativity yet delivering great value and quality for its users.
+Some of the best ideas are often quite strange when you hear about them - but that's how the world is changed - by people daring to think differently.
+Keep this in mind while working on Pebbles - dare to explore, experiment, and build incredible user experiences bassed in the insights learned from this.
 
 ## Contributing
 For making technical contributions to Pebbles you are well off by focusing on the best practices of modern frontend development and UX/UI design.
