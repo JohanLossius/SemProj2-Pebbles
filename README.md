@@ -4,12 +4,12 @@ Pebbles: A site for matching people with opportunities.
 ![Find your ideally suited IT consultant!](image.png)
 
 ## Getting started with the development:
-- Clone the repo from GitHub via GitHub Desktop:
+Clone the repo from GitHub via GitHub Desktop:
 clone from the GitHub repo: https://github.com/JohanLossius/SemProj2-Pebbles
 
 **OR**
 
-- You can also pull it directly into VS code from GitHub by adding the following.
+You can also pull it directly into VS code from GitHub by adding the following.
 
 **Add:**
 ```
@@ -21,7 +21,7 @@ git remote add origin https://github.com/JohanLossius/SemProj2-Pebbles.git
 git pull origin main
 ```
 
-**Then intsall:**
+**Then install:**
 ```
 npm i
 ```
@@ -57,9 +57,7 @@ https://polite-biscuit-4a1337.netlify.app/
 The GitHub main folder is located here:
 https://github.com/JohanLossius/SemProj2-Pebbles
 
-## Project Requirements
-
-**Semester Project 2 requirements:**
+## Semester Project 2 requirements
 
 User Stories:
   - A user with a stud.noroff.no email may register
