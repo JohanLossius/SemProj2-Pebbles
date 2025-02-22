@@ -5,8 +5,7 @@ Pebbles: A site for matching people with opportunities.
 
 ## Getting started with the development:
 - Clone the repo from GitHub via GitHub Desktop:
-clone https://github.com/JohanLossius/SemProj2-Pebbles.git
-If you are using GitHub Desktop and Visual Studio Code editor, simply launch and install it via GitHub Desktop by pulling it from the GitHub repo and follow the instructions of the program until you're setup in Visual Studio Code.
+clone from the GitHub repo: https://github.com/JohanLossius/SemProj2-Pebbles
 
 **OR**
 
@@ -25,21 +24,21 @@ And then install it:
 npm i
 ```
 ## Technologies & styling
-This project was built with
-- Vanilla javascript
+This project was built with:
+- Vanilla Javascript
 - SASS v1.69.5
 - Bootstrap v5.3.2
 
 ## Running the project
 Ensure all live servers are closed.
 Open live server, reccommended using visual studio built-in extension.
-Can also use 
+Can also use the following to run the installed live-server package.
+**Run**
 ```
 npm run start
 ```
-to use installed live-server package.
 
-Run 
+**Run** 
 ```
 npm run build
 ```
@@ -75,7 +74,7 @@ Write code that is logical in its syntax, and well structured so that it makes s
 Also ensure simple documentation throughout when purposeful, but not just for the sake of doing it.
 
 ## License
-The name, logo and brand of "Pebbles" is registered and wholly owned by Johan Lossius in Norway, and may not be re-used without my express, written permission.
+The name, logo and brand of "Pebbles" is registered and wholly owned by Johan Lossius in Norway under their respective companies, and may not be re-used without my express, written permission.
 
 ## Acknowledgments
 I've asked for help from instructors occasionally when I've had questions or challenges to deal with, so thanks a lot to those concerned, particularly Conor.
