@@ -1,5 +1,5 @@
 # Semester Project 2 - Pebbles
-Pebbles: A site for matching people with opportunities.
+**Pebbles: A site for matching people with opportunities**
 
 ![Find your ideally suited IT consultant!](image.png)
 
