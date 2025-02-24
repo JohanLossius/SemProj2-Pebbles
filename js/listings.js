@@ -12,10 +12,10 @@ logoutButton.addEventListener('click', () => {
 
 function isLoggedIn() {
   if (loggedIn) {
-    console.log("logged in: ", loggedIn);
+    // console.log("logged in: ", loggedIn);
     return true;
   } else {
-    console.log("logged in: ", loggedIn);
+    // console.log("logged in: ", loggedIn);
     return false;
   }
 };
@@ -56,7 +56,6 @@ import { options } from "../js/constants/headers.js";
 
 newListingForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  console.log("data: ", event);
 
   const title = document.querySelector(".post-message-title").value;
   const description = document.querySelector(".custom-description-new-listing").value;
@@ -66,12 +65,10 @@ newListingForm.addEventListener("submit", async (event) => {
   const profilePicUrl2 = document.querySelector(".profile-pic-url-2").value;
   const profilePicUrl3 = document.querySelector(".profile-pic-url-3").value;
   const profilePicUrls = [profilePicUrl1, profilePicUrl2, profilePicUrl3].filter(url => url.trim() !== "");
-  console.log("profilePicUrls: ", profilePicUrls);
 
   // Create array from tag input values
   const tagsInputs = document.querySelectorAll(".select-competence-categories-section input[type='checkbox']:checked");
   const tagsInputsValues = Array.from(tagsInputs).map(input => input.value);
-  console.log("tagsInputsValues: ", tagsInputsValues);
 
   // Make date format compatible with API
   const purchaseBefore = document.querySelector(".purchase-before-input").value;

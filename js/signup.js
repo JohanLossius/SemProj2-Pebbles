@@ -94,7 +94,6 @@ form.addEventListener("submit", signUp);
  */
 function signUp(event) {
     event.preventDefault();
-    console.log("signup event:", event);
 
     // Manage the first name instructions
     if (firstNameCheck(firstNameInput.value) === false) {
@@ -137,7 +136,6 @@ function signUp(event) {
  */
 form.addEventListener("submit", async (data) => {
     data.preventDefault();
-    console.log("data from signup: ", data);
   
     if (firstNameCheck(firstNameInput.value) && lastNameCheck(lastNameInput.value) && passwordCheck(passwordInput.value) && emailCheck(emailInput.value)) {
         const firstNameConst = firstNameInput.value;
@@ -167,7 +165,6 @@ form.addEventListener("submit", async (data) => {
             const resp = await fetch(signUpUrl, requestOptions)
             if(!resp.ok) {
             const json = await resp.json();
-            console.log("error json: ", json);
             throw new Error(json.errors[0].message);
             }
             if(resp.ok) {

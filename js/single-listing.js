@@ -28,10 +28,8 @@ const feedbackCont = document.querySelector(".feedback-cont");
 async function singleListingDisplay() {
   try {
     const response = await fetch(singleListingsUrl, options);
-    console.log("Response: ", response);
 
     const json = await response.json();
-    console.log("json: ", json);
 
     if(!response.ok) {
       throw new Error(json.errors[0].message);

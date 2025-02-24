@@ -51,8 +51,6 @@ form.addEventListener("submit", async (data) => {
       },
     };
         
-    console.log("RequestOptions: ", requestOptions);
-        
     try {
       const resp = await fetch(loginUrl, requestOptions);
       const json = await resp.json();

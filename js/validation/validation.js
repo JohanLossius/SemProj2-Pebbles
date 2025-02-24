@@ -4,7 +4,7 @@
  */
 export function firstNameCheck(firstName) {
   const firstNameLength = firstName.trim().length;
-  console.log(firstNameLength);
+  // console.log(firstNameLength);
   if (firstNameLength >= 2) {
       return true;
   } else {
@@ -18,7 +18,7 @@ export function firstNameCheck(firstName) {
 */
 export function lastNameCheck(lastName) {
   const lastNameLength = lastName.trim().length;
-  console.log(lastNameLength);
+  // console.log(lastNameLength);
   if (lastNameLength >= 2) {
       return true;
   } else {
@@ -42,10 +42,10 @@ export function lastNameCheck(lastName) {
 export function emailCheck(email) {
   const regEx = /\S+@\S+\.\S+/;
   const validEmail = regEx.test(email);
-  console.log(validEmail);
+  // console.log(validEmail);
 
   const studNoroffCont = email.indexOf('@stud.noroff.no');
-  console.log("studnoroffcont: ", studNoroffCont);
+  // console.log("studnoroffcont: ", studNoroffCont);
 
   if(validEmail === true && studNoroffCont > -1 === true) {
       return true;
@@ -61,7 +61,7 @@ export function emailCheck(email) {
 */
 export function passwordCheck(password) {
   const passwordLength = password.trim().length;
-  console.log(passwordLength);
+  // console.log(passwordLength);
   if (passwordLength >= 8) {
       return true;
   } else {

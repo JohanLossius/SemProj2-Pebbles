@@ -44,7 +44,6 @@ async function fetchListingsByTag(tag) {
   try {
     const response = await fetch(apiUrlByTag, options);
     const json = await response.json();
-    console.log("json fetchlistings by tag: ", json);
 
     if(!response.ok) {
       throw new Error(json.errors[0].message);

@@ -6,10 +6,10 @@ import { options } from "../js/constants/headers.js";
 
 function isLoggedIn() {
   if (loggedIn) {
-    console.log("logged in: ", loggedIn);
+    // console.log("logged in: ", loggedIn);
     return true;
   } else {
-    console.log("logged in: ", loggedIn);
+    // console.log("logged in: ", loggedIn);
     return false;
   }
 };
