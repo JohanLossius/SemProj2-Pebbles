@@ -1,7 +1,7 @@
 # Semester Project 2 - Pebbles
 **Pebbles: A site for matching people with opportunities**
 
-![Find your ideally suited IT consultant!](/img/image.png)
+![Find your ideally suited IT consultant!](/img/pebbles-screenshot-2.png)
 
 ## Getting started with the development:
 Clone the repo from GitHub via GitHub Desktop:
